@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript form validation</title>
+    <link rel="stylesheet" href="form.css">
+    <script>
+    function validate(){
+        var name=document.myform.name.value;
+        var address=document.myform.address.value;
+        var zipcode=document.myform.zipcode.value;
+        var country=document.myform.country.value;
+        var gender=document.myform.gender.value;
+        var preferences=document.myform.preferences.value;
+        var phone=document.myform.number.value;
+        var email=document.myform.email.value;
+        var password=document.myform.password.value;
+        var verifypassword=document.myform.verifypassword.value;
+         }
+        if (name==""){
+        alert("please provide your name");
+        document.myform.name.focus();
+        return false;
+        }
+        if (address==""){
+        alert("please provide your address");
+        document.myform.address.focus();
+        return false;
+        }
+        if (zipcode==""){
+        alert("please provide your zipcode");
+        document.myform.zipcode.focus();
+        return false;
+        }
+        if (country==""){
+        alert("please provide your country");
+        document.myform.country.focus();
+        return false;
+        }
+        if (gender==""){
+        alert("please provide your gender");
+        document.myform.gender.focus();
+        return false;
+        }
+        if (preferences==""){
+        alert("please provide your preferences ");
+        document.myform.preferences.focus();
+        return false;
+        }
+        if (num==""     || isNaN(num)){
+        alert("please provide your number ");
+        document.myform.number.focus();
+        return false;
+        }
+        if (email==""){
+        alert("please provide your email ");
+        document.myform.email.focus();
+        return false;
+        }
+        if (password==""){
+        alert("please provide your password ");
+        document.myform.password.focus();
+        return false;
+        }
+        if (password==""){
+        alert("please retype your password ");
+        document.myform.retypepassword.focus();
+        return false;
+        }
+    </script>
+        
+      </head>
+      
+      <body>
+   
+        <form action="" name="my form" onsubmit="return validate()" method="post">
+ <h1>Javascript Form Validation</h1>
+ <div class ="container">
+    <table>
+      <tr>
+      <td> <label>Name</label></td>
+     <td> <input type="text" name="name" placeholder=" enter full name" required></td> 
+     </tr>
+      <tr>
+     <td><label>Address</label></td>
+     <td><input type="text" name="Address" placeholder="enter your address"  required></td>
+   </tr>
+    <tr>
+    <td> <label>Zipcode</label></td>
+    <td> <input type="text" name="zipcode" placeholder="enter zipcode"  required></td>
+   </tr>
+   <tr>
+   <td><label>country</label></td> 
+    <td><input type="text" name="country" placeholder="country name" required ></td>
+    </tr>
+    <tr>
+    <td> <label>Gender</label></td>
+  <td>  <input type="radio" name="gender" value="male">male
+  <input type="radio" name="gender" value="female">female </td>
+  </tr>
+  <tr>
+   <td><label>preferences</label></td>
+   <td> <input type="checkbox"  id="myCheck">
+     Red <input type="checkbox" id="myCheck">
+      Green <input type="checkbox" id="myCheck"> Blue </td>
+  </tr>
+  <tr>
+   <td> <label>phone</label></td>
+  <td>  <input type="text" name="number" placeholder="enter number"  required></td>
+  </tr>
+  <tr>
+   <td> <label>Email</label></td>
+  <td> <input type="text" name="email" placeholder="enter email id"  required></td>
+  </tr>
+  <tr>
+   <td> <label>password(6-8 characters)</label></td>
+   <td> <input type="text" name="password" placeholder="enter password" required ></td>
+   </tr>
+   <tr>
+   <td> <label>verifypassword</label></td>
+  <td>  <input type="text" name="verifypassword" placeholder="re-enter password" required ></td>
+  </tr>
+  <tr>
+    <td></td>
+  <td><input type="submit" name="submit" value="SEND">
+   <input type="reset" name="reset" value="CLEAR"></td> 
+   </tr>
+    </table>
+
+    </form>
+    </div>
+
+    
+</body>
+</html>
